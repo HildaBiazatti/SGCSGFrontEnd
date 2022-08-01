@@ -8,7 +8,7 @@ const headerProps = {
     subtitle: 'Incluir Anuncio'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://localhost:3001/anuncios'
 const initialState = {
     anuncio: { titulo: '', link: '', imagem: '', imagemPos: ''},
     list: []
