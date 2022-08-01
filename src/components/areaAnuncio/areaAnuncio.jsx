@@ -8,7 +8,7 @@ const headerProps = {
     subtitle: 'Incluir areaAnuncio'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://localhost:3001/area-anuncios'
 const initialState = {
     areaAnuncio: { nome: ''},
     list: []
