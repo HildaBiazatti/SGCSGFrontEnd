@@ -8,7 +8,7 @@ const headerProps = {
     subtitle: 'Incluir postagem de anuncio'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://localhost:3001/postagem-anuncios'
 const initialState = {
     postagemAnuncio: { dataInicio: '', dataFim: '', Anuncio: '', areaAnuncio: ''},
     list: []
