@@ -13,8 +13,11 @@ function Nav(props) {
                 <Link to="/tema">
                     <i className="fa fa-flag"></i> Tema
                 </Link>
-                <Link to="/group">
+                <Link to="/enquete">
                     <i className="fa fa-group"></i> Cadastrar Enquete
+                </Link>
+                <Link to="/opcaoVoto">
+                    <i className="fa fa-group"></i> Cadastrar Opção de Voto
                 </Link>
                 <Link to="/password">
                     <i className="fa fa-key"></i> Cadastrar Formulario
@@ -41,8 +44,8 @@ function Nav(props) {
                 <Link to="/export">
                     <i className="fa fa-share"></i> Postagem Formulario
                 </Link>
-                <Link to="/sub">
-                    <i className="fa fa-money"></i> Postagem Enquete
+                <Link to="/voto">
+                    <i className="fa fa-group"></i> Voto
                 </Link>
                 <span>Relatórios</span>
                 <Link to="/">
@@ -54,8 +57,8 @@ function Nav(props) {
                 <Link to="/">
                     <i className="fa fa-home"></i> Noticia
                 </Link>
-                <Link to="/">
-                    <i className="fa fa-home"></i> Enquete
+                <Link to="/relatorioVotos">
+                    <i className="fa fa-group"></i> Total de votos por enquete
                 </Link>
                 <Link to="/relatorioAnuncio">
                     <i className="fa fa-home"></i> Formulario

@@ -8,9 +8,9 @@ const headerProps = {
     subtitle: 'Adicionar uma nova opção de voto'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://localhost:3001/opcaoVoto'
 const initialState = {
-    areaAnuncio: { valor: '', enquete_ov: ''},
+    opcaoVoto: { valor: '', enquete_ov: ''},
     list: []
 }
 
@@ -25,7 +25,7 @@ export default class UserCrud extends Component {
     }
 
     clear() {
-        this.setState({ opcaoVoto: initialState.opcaoVoto })
+        this.setState({ user: initialState.opcaoVoto })
     }
 
     // save() {
@@ -42,7 +42,7 @@ export default class UserCrud extends Component {
 
     updateField(event) {
         const opcaoVoto = { ...this.state.opcaoVoto }
-        opcaoVoto[event.target.name] = event.target.value
+        opcaoVoto[event.target.opcaoVoto] = event.target.value
         this.setState({ opcaoVoto })
     }
 
@@ -55,7 +55,7 @@ export default class UserCrud extends Component {
                             <label>Valor</label>
                             <input type="text" className="form-control"
                                 name="valor"
-                                value={this.state.opcaoVoto.Valor}
+                                value={this.state.opcaoVoto.valor}
                                 onChange={e => this.updateField(e)}
                                 placeholder="Digite o valor do campo..." />
                         </div>
@@ -69,7 +69,7 @@ export default class UserCrud extends Component {
                         <div className="form-group">
                             <label>Enquete</label>
                             <select className="form-control"
-                                name="estado" value={this.state.enquete.estado}
+                                name="estado" value={this.state.opcaoVoto.estado}
                                 onChange={e => this.updateField(e)}>
                                 <option>Qual o melhor time do Rio?</option> {/*alterar isso*/}
                                 <option>Qual a sua área em TI?</option> {/*alterar isso*/}

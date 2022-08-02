@@ -10,7 +10,7 @@ const headerProps = {
 
 const baseUrl = 'http://localhost:3001/users'
 const initialState = {
-    user: { nome: '', sobrenome: '', cpf: '', email: '', telefone: '', senha: '', senha2: '' },
+    voto: { dataVoto: '', enquete: '', op1: '', op2: '', op3: '', op4: '' },
     list: []
 }
 
@@ -25,7 +25,7 @@ export default class UserCrud extends Component {
     }
 
     clear() {
-        this.setState({ user: initialState.user })
+        this.setState({ user: initialState.voto })
     }
 
     // save() {
@@ -41,34 +41,34 @@ export default class UserCrud extends Component {
     // }
 
     updateField(event) {
-        const user = { ...this.state.user }
-        user[event.target.name] = event.target.value
-        this.setState({ user })
+        const voto = { ...this.state.voto }
+        voto[event.target.voto] = event.target.value
+        this.setState({ voto })
     }
 
     renderForm() {
         return (
             <div className="form">
                 <div className="row">
-                    <div className="col-12 col-md-6">
+                <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>Nome</label>
-                            <input type="text" className="form-control"
-                                name="nome"
-                                value={this.state.user.nome}
+                            <label>Data do voto</label>
+                            <input type="date" className="form-control"
+                                name="dataInicio"
+                                value={this.state.voto.dataVoto}
                                 onChange={e => this.updateField(e)}
-                                placeholder="Digite o nome..." />
+                                disabled />
                         </div>
                     </div>
 
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>Sobrenome</label>
-                            <input type="text" className="form-control"
-                                name="sobrenome"
-                                value={this.state.user.sobrenome}
-                                onChange={e => this.updateField(e)}
-                                placeholder="Digite o sobrenome..." />
+                            <label>Enquete</label>
+                            <select className="form-control"
+                                name="estado" value={this.state.voto.enquete}
+                                onChange={e => this.updateField(e)}>
+                                <option>Qual o melhor time do Rio?</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -77,24 +77,41 @@ export default class UserCrud extends Component {
 
                 <div className="row">
                     <div className="col-12 col-md-6">
-                        <div className="form-group">
-                            <label>CPF</label>
-                            <input type="text" className="form-control"
-                                name="cpf"
-                                value={this.state.user.cpf}
-                                onChange={e => this.updateField(e)}
-                                placeholder="Digite o cpf..." />
+                        <label>Qual o melhor time do Rio?</label>
+                        <div className="form-check">                            
+                            <input type="radio" className="form-check-input"
+                                name="op1"
+                                id="op1"
+                                value={this.state.voto.op1}
+                                onChange={e => this.updateField(e)} />
+                            <label className="form-check-label" for="op1">Flamengo</label>
                         </div>
-                    </div>
 
-                    <div className="col-12 col-md-6">
-                        <div className="form-group">
-                            <label>URL da imagem</label>
-                            <input type="text" className="form-control"
-                                name="telefone"
-                                value={this.state.user.telefone}
-                                onChange={e => this.updateField(e)}
-                                placeholder="Digite o telefone..." />
+                        <div className="form-check">
+                            <input type="radio" className="form-check-input"
+                                name="op2"
+                                id="op2"
+                                value={this.state.voto.op2}
+                                onChange={e => this.updateField(e)} />
+                            <label className="form-check-label" for="op2">Fluminense</label>
+                        </div>
+
+                        <div className="form-check">
+                            <input type="radio" className="form-check-input"
+                                name="op3"
+                                id="op3"
+                                value={this.state.voto.op3}
+                                onChange={e => this.updateField(e)} />
+                            <label className="form-check-label" for="op3">Vasco</label>
+                        </div>
+
+                        <div className="form-check">
+                            <input type="radio" className="form-check-input"
+                                name="op4"
+                                id="op4"
+                                value={this.state.voto.op4}
+                                onChange={e => this.updateField(e)} />
+                            <label className="form-check-label" for="op4">Botafogo</label>
                         </div>
                     </div>
                 </div>

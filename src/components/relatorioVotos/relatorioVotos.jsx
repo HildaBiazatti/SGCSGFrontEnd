@@ -3,14 +3,14 @@ import axios from "axios";
 import Main from "../template/Main";
 
 const headerProps = {
-    icon: 'user',
-    title: 'Cadastro de Tema',
-    subtitle: 'Incluir Tema'
+    icon: 'relatorioVotos',
+    title: 'Relatório de Votos',
+    subtitle: 'Total de votos por enquete'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://localhost:3001/voto/relatorio/'
 const initialState = {
-    user: { nome: '', sobrenome: '', cpf: '', email: '', telefone: '', senha: '', senha2: '' },
+    relatorioVotos: { dataInicio: '', dataFim: '', resultado: '' },
     list: []
 }
 
@@ -25,7 +25,7 @@ export default class UserCrud extends Component {
     }
 
     clear() {
-        this.setState({ user: initialState.user })
+        this.setState({ user: initialState.relatorioVotos })
     }
 
     // save() {
@@ -41,9 +41,9 @@ export default class UserCrud extends Component {
     // }
 
     updateField(event) {
-        const user = { ...this.state.user }
-        user[event.target.name] = event.target.value
-        this.setState({ user })
+        const relatorioVotos = { ...this.state.relatorioVotos }
+        relatorioVotos[event.target.relatorioVotos] = event.target.value
+        this.setState({ relatorioVotos })
     }
 
     renderForm() {
@@ -52,54 +52,39 @@ export default class UserCrud extends Component {
                 <div className="row">
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>Nome</label>
-                            <input type="text" className="form-control"
-                                name="nome"
-                                value={this.state.user.nome}
+                            <label>Data Inicio</label>
+                            <input type="date" className="form-control"
+                                name="dataInicio"
+                                value={this.state.relatorioVotos.dataInicio}
                                 onChange={e => this.updateField(e)}
-                                placeholder="Digite o nome..." />
+                                 />
                         </div>
                     </div>
 
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>Sobrenome</label>
-                            <input type="text" className="form-control"
-                                name="sobrenome"
-                                value={this.state.user.sobrenome}
+                            <label>Data Fim</label>
+                            <input type="date" className="form-control"
+                                name="dataFim"
+                                value={this.state.relatorioVotos.dataFim}
                                 onChange={e => this.updateField(e)}
-                                placeholder="Digite o sobrenome..." />
+                                 />
                         </div>
                     </div>
                 </div>
 
                 <br />
 
-                <div className="row">
-                    <div className="col-12 col-md-6">
+                <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>CPF</label>
-                            <input type="text" className="form-control"
-                                name="cpf"
-                                value={this.state.user.cpf}
+                            <label>Resultado</label>
+                            <input type="number" className="form-control"
+                                name="resultado"
+                                value={this.state.relatorioVotos.resultado}
                                 onChange={e => this.updateField(e)}
-                                placeholder="Digite o cpf..." />
+                                 />
                         </div>
                     </div>
-
-                    <div className="col-12 col-md-6">
-                        <div className="form-group">
-                            <label>URL da imagem</label>
-                            <input type="text" className="form-control"
-                                name="telefone"
-                                value={this.state.user.telefone}
-                                onChange={e => this.updateField(e)}
-                                placeholder="Digite o telefone..." />
-                        </div>
-                    </div>
-                </div>
-
-                <br /><br />
 
                 <div className="row">
                     <div className="col-12 d-flex justify-content-end">
