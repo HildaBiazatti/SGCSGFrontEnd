@@ -8,7 +8,7 @@ const headerProps = {
     subtitle: 'Incluir Tema'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://localhost:3001/postagem-anuncios/relatorio'
 const initialState = {
     user: { nome: '', sobrenome: '', cpf: '', email: '', telefone: '', senha: '', senha2: '' },
     list: []
