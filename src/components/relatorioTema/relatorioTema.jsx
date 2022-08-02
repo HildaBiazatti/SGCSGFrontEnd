@@ -8,7 +8,7 @@ const headerProps = {
     subtitle: 'Relatorio Tema'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://localhost:3001/compratema/relatorio/findTotal/'
 const initialState = {
     relatorioTema: { dataInicio: '', dataFim: '', resultado: ''},
     list: []
