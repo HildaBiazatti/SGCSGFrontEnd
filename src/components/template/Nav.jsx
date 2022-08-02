@@ -19,13 +19,13 @@ function Nav(props) {
                 <Link to="/opcaoVoto">
                     <i className="fa fa-group"></i> Cadastrar Opção de Voto
                 </Link>
-                <Link to="/password">
+                <Link to="/formulario">
                     <i className="fa fa-key"></i> Cadastrar Formulario
                 </Link>
                 <Link to="/Anuncio">
                     <i className="fa fa-user"></i> Cadastrar Anuncio
                 </Link>
-                <Link to="/question">
+                <Link to="/crudNoticia">
                     <i className="fa fa-question"></i> Cadastrar Noticia
                 </Link>
                 <span>Processos de Negócio</span>
@@ -38,7 +38,7 @@ function Nav(props) {
                 <Link to="/compraTema">
                     <i className="fa fa-wifi"></i> Compra Tema
                 </Link>
-                <Link to="/familyshare">
+                <Link to="/Noticia">
                     <i className="fa fa-share"></i> Postagem Noticia
                 </Link>
                 <Link to="/export">
@@ -48,19 +48,19 @@ function Nav(props) {
                     <i className="fa fa-group"></i> Voto
                 </Link>
                 <span>Relatórios</span>
-                <Link to="/">
+                <Link to="/relatorioAnuncio">
                     <i className="fa fa-home"></i> Anuncio
                 </Link>
                 <Link to="/relatorioTema">
                     <i className="fa fa-home"></i> Tema
                 </Link>
-                <Link to="/">
+                <Link to="/relatorioNoticia">
                     <i className="fa fa-home"></i> Noticia
                 </Link>
                 <Link to="/relatorioVotos">
                     <i className="fa fa-group"></i> Total de votos por enquete
                 </Link>
-                <Link to="/relatorioAnuncio">
+                <Link to="/relatorioFormulario">
                     <i className="fa fa-home"></i> Formulario
                 </Link>
             </nav>
