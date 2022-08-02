@@ -14,6 +14,10 @@ import voto from "../components/voto/voto"
 import relatorioVotos from "../components/relatorioVotos/relatorioVotos"
 import formulario from "../components/Formulario/Formulario"
 import relatorioFormulario from "../components/relatorioFormulario/relatorioFormulario"
+import crudNoticia from "../components/noticia/noticia"
+import Noticia from "../components/postagemNoticia/postagemNoticia"
+import relatorioNoticia from "../components/relatorioNoticia/relatorioNoticia"
+
 
 
 
@@ -34,6 +38,9 @@ function Routes (props) {
         <Route path='/relatorioVotos' component={relatorioVotos} /> 
         <Route path='/formulario' component={formulario} /> 
         <Route path='/relatorioFormulario' component={relatorioFormulario} /> 
+        <Route path='/crudNoticia' component={crudNoticia} /> 
+        <Route path='/Noticia' component={Noticia} /> 
+        <Route path='/relatorioNoticia' component={relatorioNoticia} /> 
 
         </Switch>
     )
