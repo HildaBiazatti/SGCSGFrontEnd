@@ -8,7 +8,7 @@ const headerProps = {
     subtitle: 'Compra Tema'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://localhost:3001/compratema'
 const initialState = {
     compraTema: { tema: '', cartao:'', seguranca:''},
     list: []
